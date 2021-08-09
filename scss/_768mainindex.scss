@@ -1,0 +1,103 @@
+/* INDEX */
+.encabezadoPrincipal {
+    margin: 20px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    .flashmobGif{
+        justify-self: center;
+        padding: 20px;
+        width: 320px;
+    }
+    .textoPrincipal{
+        color: $coral;
+        text-align: center;
+        font-size: 3.4vw;
+        line-height: 7.3vw;
+        font-weight: bold;
+    }
+}
+.textoVideo{
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    height: auto;
+    .tituloPrincipal {
+        grid-area: tituloPrincipal;
+        justify-self: center;
+        color: $coral;
+    }
+    .parrafoPrincipal {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto 360px;
+        grid-template-areas: 
+            "textoParrafo1"
+            "textoParrafo2"
+            "textoParrafo3"
+            "textoParrafo4"
+            "videoPrincipal";
+        text-align: justify;
+        text-indent: 25px;
+        .videoPrincipal{
+            grid-area: videoPrincipal;
+            justify-self: center;
+            margin-top: 30px;
+        }
+        .textoParrafo1{
+            grid-area: textoParrafo1;
+        }
+        .textoParrafo2{
+            grid-area: textoParrafo2;
+        }
+        .textoParrafo3{
+            grid-area: textoParrafo3;
+        }
+        .textoParrafo4{
+            grid-area: textoParrafo4;
+        }
+    }
+}
+.notasDiario{
+    display: grid;
+    width: 90%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 20px 310px;
+    grid-template-areas: 
+        "titulo titulo"
+        "clarin lanacion";
+    gap: 20px;
+    .tituloDiario{
+        color: $coral;
+        justify-self: center;
+        grid-area: titulo;
+    }
+    .fotoClarin{
+        justify-self: center;
+        width: 250px;
+        margin-top: 10px;
+        grid-area: clarin;
+        &:hover{
+            transform: scale(1.025,1.025);
+        }
+    }
+    .fotoLanacion{
+        justify-self: center;
+        width: 228px;
+        margin-top: 10px;
+        grid-area: lanacion;
+        &:hover{
+            transform: scale(1.025,1.025);
+        }
+    }
+}
+/* FIN INDEX */

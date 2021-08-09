@@ -1,0 +1,21 @@
+/* CONTACTO */
+.tituloContacto{
+    margin: 20px;
+    text-align: center;
+    color: $coral;
+}
+.formulario{
+    margin-left: 25%;
+    width: 50%;
+    input{
+        font-style: italic;
+    }
+    textarea{
+        font-style: italic;
+    }
+    .botonForm{
+        background-color: $azul;
+        border: solid 1px $blanco;
+    }
+}
+/* FIN CONTACTO */

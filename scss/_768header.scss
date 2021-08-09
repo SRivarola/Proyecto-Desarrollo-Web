@@ -1,0 +1,69 @@
+/* Header */
+@mixin header ($wid, $zin){
+    width: $wid;
+    position: absolute;
+    position: fixed;
+    z-index: $zin;
+}
+header{
+    height: 450px;
+    width: 100%;
+    background-image: url("https://i.postimg.cc/Dfb4dM0L/portada.jpg");
+    background-size: cover;
+    .fotoLogo{
+        @include header (130px, 2);
+        margin-left: 20px;
+        filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.7));
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .barraMenu{
+        @include header (100%, 1);
+        height: auto;
+        background-color: $azulnav;
+        border-bottom: $coral solid 2px;
+        .botonHamburguesa{
+            color: $blanco;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+        .textoMenu{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: right;
+            margin-top: 5px; 
+            .botonFijo{
+                color: $coral;
+                font-size: 20px;
+                text-decoration: none;
+                padding-right: 70px;
+                margin-top: 7px;
+                font-weight: bolder;
+                text-shadow: black 1px 1px;
+            }           
+            .botonMenu{
+                text-decoration: none;
+                color: $blanco;
+                font-size: 20px;
+                padding-right: 70px;
+                &:hover{
+                    color: $coral;
+                }
+            }
+        }
+    }
+    .linkScroll{
+        padding-top: 370px;
+        .botonScroll{
+            color: $blanco;
+            font-size: 60px;
+            font-weight: bolder;
+            text-align: center;
+            &:hover{
+                color: $coral;
+            }
+        }
+    }
+}

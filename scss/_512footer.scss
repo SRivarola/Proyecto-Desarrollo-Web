@@ -1,0 +1,28 @@
+/* FOOTER */
+@mixin redes($wid, $mt, $mr){
+    width: $wid;
+    float: right;
+    margin-top: $mt;
+    margin-right: $mr;
+    &:hover{
+        transform: scale(1.1, 1.1);
+        font-size: 22px;
+    }
+}
+footer{
+    border-top: solid 3px #ed1650;
+    background: linear-gradient(90deg, $azul 15%, $coral 50%, $blanco 75%, $blanco 100%);
+    height: 60px;
+    .redesSociales li{
+        width: 50px;
+        display: inline;
+        .redesInsta{
+            @include redes(40px, 6px, 15px)
+        }
+        .redesVimeo{
+            @include redes(none, 13px, 10px);
+            font-size: 20px;
+        }
+    }
+}
+/* FIN FOOTER */

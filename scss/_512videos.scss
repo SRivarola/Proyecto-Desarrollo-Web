@@ -1,0 +1,16 @@
+/* VIDEOS */
+.videos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .galeriaVideos{
+        width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+        iframe{
+            width: 340px;
+            height: 191px;
+        }
+    }
+}
+/* FIN VIDEOS */

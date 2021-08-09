@@ -1,0 +1,111 @@
+/* INDEX */
+.cajaVacia{
+    width: 100%;
+    height: 10px;
+}
+.encabezadoPrincipal {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    .flashmobGif{
+        margin: 0 auto;
+        width: 380px;
+    }
+    .textoPrincipal{
+        margin-top: 10px;
+        color: $coral;
+        text-align: center;
+        font-size: 9vw;
+        line-height: 13vw;
+        font-weight: bold;
+    }
+}
+.textoVideo{
+    width: 90%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    height: auto;
+    .tituloPrincipal {
+        grid-area: tituloPrincipal;
+        justify-self: center;
+        color: $coral;
+    }
+    .parrafoPrincipal {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto 360px;
+        grid-template-areas: 
+            "textoParrafo1"
+            "textoParrafo2"
+            "textoParrafo3"
+            "textoParrafo4"
+            "videoPrincipal";
+        text-align: justify;
+        text-indent: 25px;
+        iframe{
+            width: 400px;
+            height: 225px;
+        }
+        .videoPrincipal{
+            grid-area: videoPrincipal;
+            justify-self: center;
+            margin-top: 30px;
+        }
+        .textoParrafo1{
+            grid-area: textoParrafo1;
+        }
+        .textoParrafo2{
+            grid-area: textoParrafo2;
+        }
+        .textoParrafo3{
+            grid-area: textoParrafo3;
+        }
+        .textoParrafo4{
+            grid-area: textoParrafo4;
+        }
+    }
+}
+.notasDiario{
+    display: grid;
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 220px 220px;
+    grid-template-areas: 
+        "titulo"
+        "clarin" 
+        "lanacion";
+    gap: 20px;
+    .tituloDiario{
+        color: $coral;
+        justify-self: center;
+        grid-area: titulo;
+    }
+    .fotoClarin{
+        justify-self: center;
+        width: 200px;
+        margin-top: 10px;
+        grid-area: clarin;
+        &:hover{
+            transform: scale(1.025,1.025);
+        }
+    }
+    .fotoLanacion{
+        justify-self: center;
+        width: 200px;
+        margin-top: 10px;
+        grid-area: lanacion;
+        &:hover{
+            transform: scale(1.025,1.025);
+        }
+    }
+}
+/* FIN INDEX */

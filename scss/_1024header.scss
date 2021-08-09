@@ -1,0 +1,63 @@
+/* Header */
+@mixin header ($wid, $zin){
+    width: $wid;
+    position: absolute;
+    position: fixed;
+    z-index: $zin;
+}
+header{
+    height: 620px;
+    width: 100%;
+    background-image: url("https://i.postimg.cc/Dfb4dM0L/portada.jpg");
+    background-size: cover;
+    .fotoLogo{
+        @include header (160px, 2);
+        margin-left: 30px;
+        filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.7));
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .barraMenu{
+        @include header (100%, 1);
+        height: 60px;
+        background-color: $azulnav;
+        border-bottom: $coral solid 2px;
+        .textoMenu{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 7px;
+            .botonFijo{
+                color: $coral;
+                font-size: 30px;
+                text-decoration: none;
+                padding-left: 50px;
+                margin-top: 7px;
+                font-weight: bolder;
+                text-shadow: black 1px 1px;
+            }
+            .botonMenu{
+                text-decoration: none;
+                color: $blanco;
+                font-size: 30px;
+                padding-left: 50px;
+                &:hover{
+                    color: $coral;
+                }
+            }
+        }
+    }
+    .linkScroll{
+        padding-top: 500px;
+        .botonScroll{
+            color: $blanco;
+            font-size: 80px;
+            font-weight: bolder;
+            text-align: center;
+            &:hover{
+                color: $coral;
+            }
+        }
+    }
+}

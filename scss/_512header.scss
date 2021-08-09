@@ -1,0 +1,60 @@
+/* Header */
+@mixin header ($wid, $zin){
+    width: $wid;
+    position: absolute;
+    position: fixed;
+    z-index: $zin;
+}
+header{
+    height: 220px;
+    width: 100%;
+    background-image: url("https://i.postimg.cc/zv3j0SL3/Portada.jpg");
+    background-size: cover;
+    background-position: center;
+    .fotoLogo{
+        @include header (80px, 2);
+        margin-left: 10px;
+        position: fixed;
+        filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.7));
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .barraMenu{
+        @include header (100%, 1);
+        height: auto;
+        background-color: $azulnav;
+        border-bottom: $coral solid 2px;
+        .botonHamburguesa{
+            color: $blanco;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+        .textoMenu{
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            margin-top: 3px;
+            .botonFijo{
+                color: $coral;
+                font-size: 16px;
+                text-decoration: none;
+                padding-right: 10px;
+                font-weight: bolder;
+                text-shadow: black 1px 1px;
+            }   
+            .botonMenu{
+                text-decoration: none;
+                color: $blanco;
+                font-size: 16px;
+                padding-right: 10px;
+                &:hover{
+                    color: $coral;
+                }
+            }
+        }
+    }
+    .botonScroll{
+        display: none;
+    }
+}
